@@ -1,6 +1,6 @@
 module RE_control_top(
 	input wire clk, reset, Init, Exp_inc, Exp_dec,
-	output logic NRE_1, NRE_2, ADC, Expose, Erase);
+	output reg NRE_1, NRE_2, ADC, Expose, Erase);
 
 	wire EX_time;
 	wire Start;

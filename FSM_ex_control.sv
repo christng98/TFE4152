@@ -2,7 +2,7 @@
 
 module FSM_ex_control(
 	input wire clk, reset, Init, Ovf5,
-	output logic NRE_1, NRE_2, ADC, Expose, Erase, Start);
+	output reg NRE_1, NRE_2, ADC, Expose, Erase, Start);
 	
 	typedef enum logic [1:0] { Idle, Exposure, Readout } State;
 	
@@ -67,6 +67,8 @@ module FSM_ex_control(
 					NRE_2     <= 1'b0;
 					#1;
 					ADC       <= 1'b1;
+					#1;
+					ADC       <= 1'b0;
 					#1;
 					NRE_2     <= 1'b1;
 					Ovf4      <= 1'b1;
