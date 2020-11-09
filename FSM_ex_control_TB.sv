@@ -1,4 +1,4 @@
-`timescale 1ns/1ps	
+`timescale 1ms/1ps	
 
 module FSM_ex_control_TB();
 	logic clk;
@@ -33,7 +33,8 @@ module FSM_ex_control_TB();
 	
 	initial begin
 		reset=1'b1; clk=0; Init=1'b0; Ovf5=1'b0; #1;
-		reset=1'b0; #1.5; Init=1'b1; #1; Init=1'b0; #5; Ovf5=1'b1; #1; Ovf5=1'b0; #50;
+		reset=1'b0; #1.5; Init=1'b1; #1; Init=1'b0; #5; Ovf5=1'b1; #1; Ovf5=1'b0; #15;
+		Init=1'b1;#1;Init=1'b0;#15;Ovf5=1'b1;#1;Ovf5=1'b0;#10;
 		$finish();
 	end
 

@@ -1,4 +1,4 @@
-`timescale 1ns/1ps 
+`timescale 1ms/1ps 
 
 module Timer_counter(
 	input wire clk, reset, Start, 
@@ -6,7 +6,7 @@ module Timer_counter(
 	output logic Ovf5);	
 	
 	always @(posedge clk) begin
-		Ovf5 <= repeat (Initial-1) @(posedge clk) Start;
+		Ovf5 <= repeat (Initial-2) @(posedge clk) Start;
 	end
 
 endmodule

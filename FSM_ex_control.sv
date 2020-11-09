@@ -1,4 +1,4 @@
-`timescale 1ns/1ps 
+`timescale 1ms/1ps 
 
 module FSM_ex_control(
 	input wire clk, reset, Init, Ovf5,
@@ -35,7 +35,7 @@ module FSM_ex_control(
 						$display("Exposure");
 						Start		 <= 1'b1;
 						Expose		 <= 1'b1;
-						Erase 		 <= 1'b0;	
+						Erase 		 <= 1'b0;
 						
 						if(Ovf5) nextState <= Readout;
 						else 	nextState <= Exposure;

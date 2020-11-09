@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ms/1ps
 
 module CTRL_ex_time_TB();
 	logic clk;
@@ -15,7 +15,7 @@ module CTRL_ex_time_TB();
 		.Exp_dec(Exp_dec),
 		.Erase(Erase),
 		.EX_time(EX_time)
-		);
+	);
 	
 	always begin
 		clk = ~clk; #0.5;

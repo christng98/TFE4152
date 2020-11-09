@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ms/1ps
 
 module CTRL_ex_time(
 	input wire clk, reset, Exp_inc, Exp_dec, Erase,
