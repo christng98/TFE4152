@@ -4,3 +4,4 @@ In this project we are designing and implementing the analog and digital control
 
 ![alt text](https://github.com/HunkyMcHunkin/TFE4152/blob/main/blokkdiagram.png)
 
+To design this we have designed the *Readout and control* in SystemVerilog, implemented the *Pixel electronics* in AimSpice, and achieved the desired behaviour. Here we're only including the HDL part. The two figures below shows the three modules we're designing, and the timing diagram with the desired behaviour.
