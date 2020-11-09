@@ -8,14 +8,15 @@ module CTRL_ex_time(
 	reg [4:0] counter = 5'b00010;
 	
 	always_ff @(posedge clk) begin
-		if(Exp_inc && Erase && counter <= 5'b11110)	begin
+		if(Exp_inc && Erase && counter < 5'b11110)	begin
 			counter <= counter + 1;
-			EX_time <= counter;
+			$display("Increase");
 		end
-		else if (Exp_dec && Erase && counter >= 5'b00010) begin
+		else if (Exp_dec && Erase && counter > 5'b00010) begin
 			counter <= counter - 1;
-			EX_time <= counter;
+			$display("Decrease");
 		end
+		EX_time <= counter;
 	end	
 	
 endmodule
