@@ -9,3 +9,5 @@ To design this we have designed the *Readout and control* in SystemVerilog, impl
 <img src="https://github.com/HunkyMcHunkin/TFE4152/blob/main/timingdiagram.png" width=40%><img src="https://github.com/HunkyMcHunkin/TFE4152/blob/main/timingdiagram_desired.png" width=60%>
 
 <img src="https://github.com/HunkyMcHunkin/TFE4152/blob/main/mydiagram.png" width=100%>
+
+Further improvement of the digital control unit would be to write code for the submodules to support the "Reset"-flag. The problem occurs when the FSM is in Readout state at the same time "Reset" is set HIGH. 
